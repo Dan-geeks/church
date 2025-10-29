@@ -1,0 +1,300 @@
+.pastors-page {
+  min-height: calc(100vh - 80px);
+}
+
+/* Hero Section */
+.pastors-hero {
+  background: linear-gradient(135deg, rgba(44, 62, 80, 0.95), rgba(52, 73, 94, 0.95)),
+    url('../assets/church.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 8rem 2rem 6rem;
+  text-align: center;
+  color: white;
+}
+
+.pastors-hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  animation: fadeInDown 1s ease;
+}
+
+.pastors-hero-content p {
+  font-size: 1.4rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.8;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 1s ease;
+}
+
+/* Pastors Section */
+.pastors-section {
+  padding: 5rem 2rem;
+  background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+}
+
+.section-intro {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 4rem;
+}
+
+.section-intro h2 {
+  font-size: 2.8rem;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+}
+
+.section-intro p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.9;
+}
+
+.pastors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pastor-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.pastor-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.pastor-image-container {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+}
+
+.pastor-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.pastor-card:hover .pastor-image {
+  transform: scale(1.08);
+}
+
+.pastor-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+  padding: 2rem;
+  color: white;
+  transform: translateY(0);
+  transition: all 0.3s ease;
+}
+
+.pastor-overlay h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.pastor-overlay .pastor-title {
+  color: #f39c12;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.pastor-details {
+  padding: 2rem;
+}
+
+.pastor-name {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  display: none;
+}
+
+.pastor-position {
+  color: #f39c12;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  display: none;
+}
+
+.pastor-bio {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: #555;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+.pastor-specialties {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border-left: 4px solid #f39c12;
+}
+
+.pastor-specialties h4 {
+  color: #2c3e50;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.pastor-specialties ul {
+  list-style: none;
+  padding: 0;
+}
+
+.pastor-specialties li {
+  padding: 0.5rem 0;
+  color: #555;
+  font-size: 1rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.pastor-specialties li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #f39c12;
+  font-weight: bold;
+}
+
+/* Connect Section */
+.connect-section {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  color: white;
+  text-align: center;
+}
+
+.connect-section h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.connect-section > .container > p {
+  font-size: 1.2rem;
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  line-height: 1.9;
+  color: #e8e8e8;
+}
+
+.connect-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.connect-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2.5rem;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.connect-card:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-5px);
+  border-color: #f39c12;
+}
+
+.connect-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.connect-card h3 {
+  color: #f39c12;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.connect-card p {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+  color: #e8e8e8;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pastors-hero {
+    padding: 5rem 1.5rem 4rem;
+    background-attachment: scroll;
+  }
+
+  .pastors-hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .pastors-hero-content p {
+    font-size: 1.1rem;
+  }
+
+  .pastors-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .pastor-image-container {
+    height: 350px;
+  }
+
+  .section-intro h2,
+  .connect-section h2 {
+    font-size: 2rem;
+  }
+
+  .connect-options {
+    grid-template-columns: 1fr;
+  }
+}

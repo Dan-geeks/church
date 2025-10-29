@@ -1,0 +1,361 @@
+.contact-page {
+  min-height: calc(100vh - 80px);
+}
+
+/* Hero Section */
+.contact-hero {
+  background: linear-gradient(135deg, rgba(52, 152, 219, 0.9), rgba(41, 128, 185, 0.9)),
+    url('../assets/church.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 8rem 2rem 6rem;
+  text-align: center;
+  color: white;
+}
+
+.contact-hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+  animation: fadeInDown 1s ease;
+}
+
+.contact-hero-content p {
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  animation: fadeInUp 1s ease;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 5rem 2rem;
+  background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Contact Form */
+.contact-form-container h2 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.form-intro {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
+}
+
+.contact-form {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 1.8rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #e8e8e8;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  background: #f8f9fa;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #f39c12;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.submit-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #f39c12, #e67e22);
+  color: white;
+  border: none;
+  padding: 1.2rem 2rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(243, 156, 18, 0.3);
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(243, 156, 18, 0.4);
+}
+
+/* Contact Information */
+.contact-info-container h2 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.info-intro {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
+}
+
+.info-cards {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.info-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-left: 4px solid #f39c12;
+}
+
+.info-card:hover {
+  transform: translateX(5px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+}
+
+.info-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.info-card h3 {
+  color: #2c3e50;
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+}
+
+.info-card p {
+  color: #555;
+  font-size: 1.05rem;
+  margin: 0.4rem 0;
+}
+
+.office-note {
+  font-size: 0.9rem !important;
+  color: #888 !important;
+  font-style: italic;
+}
+
+.info-link {
+  display: inline-block;
+  margin-top: 0.8rem;
+  color: #f39c12;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.info-link:hover {
+  color: #e67e22;
+}
+
+/* Social Section */
+.social-section {
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  padding: 2.5rem;
+  border-radius: 15px;
+  text-align: center;
+  color: white;
+}
+
+.social-section h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+  color: white;
+}
+
+.social-section p {
+  margin-bottom: 2rem;
+  color: #e8e8e8;
+}
+
+.social-links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.social-link {
+  padding: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.social-link.facebook {
+  background: #3b5998;
+}
+
+.social-link.twitter {
+  background: #1da1f2;
+}
+
+.social-link.instagram {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+.social-link.youtube {
+  background: #ff0000;
+}
+
+.social-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Map Section */
+.map-section {
+  padding: 5rem 2rem;
+  background: white;
+}
+
+.map-section h2 {
+  font-size: 2.8rem;
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 3rem;
+}
+
+.map-container {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  margin-bottom: 2rem;
+}
+
+.map-container iframe {
+  display: block;
+}
+
+.map-info {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.map-info p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+.map-info strong {
+  color: #2c3e50;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-hero {
+    padding: 5rem 1.5rem 4rem;
+    background-attachment: scroll;
+  }
+
+  .contact-hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .contact-hero-content p {
+    font-size: 1.2rem;
+  }
+
+  .contact-form-container h2,
+  .contact-info-container h2 {
+    font-size: 2rem;
+  }
+
+  .contact-form {
+    padding: 1.5rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .social-links {
+    grid-template-columns: 1fr;
+  }
+
+  .map-section h2 {
+    font-size: 2rem;
+  }
+}
