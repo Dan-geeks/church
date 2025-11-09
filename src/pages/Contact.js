@@ -170,18 +170,18 @@ function Contact() {
                 <h3>Connect With Us</h3>
                 <p>Follow us on social media for updates and inspiration</p>
                 <div className="social-links">
-                  <a href="#" className="social-link facebook">
-                    <i className="bi bi-facebook"></i> Facebook
-                  </a>
-                  <a href="#" className="social-link twitter">
-                    <i className="bi bi-twitter"></i> Twitter
-                  </a>
-                  <a href="#" className="social-link instagram">
-                    <i className="bi bi-instagram"></i> Instagram
-                  </a>
-                  <a href="#" className="social-link youtube">
-                    <i className="bi bi-youtube"></i> YouTube
-                  </a>
+                <button className="social-link facebook" type="button">
+  <i className="bi bi-facebook"></i> Facebook
+</button>
+<button className="social-link twitter" type="button">
+  <i className="bi bi-twitter"></i> Twitter
+</button>
+<button className="social-link instagram" type="button">
+  <i className="bi bi-instagram"></i> Instagram
+</button>
+<button className="social-link youtube" type="button">
+  <i className="bi bi-youtube"></i> YouTube
+</button>
                 </div>
               </div>
             </div>

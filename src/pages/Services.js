@@ -161,7 +161,7 @@ function Services() {
             <a href="tel:+254721253234" className="btn btn-primary">
               Call Us
             </a>
-            <a href="#" className="btn btn-outline">
+            <a href="https://maps.google.com/maps?q=0.5619081,35.3115442&z=17" target="_blank" rel="noopener noreferrer" className="btn btn-outline">
               Get Directions
             </a>
           </div>
