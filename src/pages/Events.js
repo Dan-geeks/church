@@ -200,3 +200,4 @@ function Events() {
 }
 
 export default Events;
+//src/pages/Departments.js
