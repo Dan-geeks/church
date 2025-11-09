@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Pastors from './pages/Pastors';
 import ChurchElders from './pages/ChurchElders';
+import OurTeam from './pages/OurTeam';
 import Services from './pages/Services';
 import Sermons from './pages/Sermons';
 import Choir from './pages/Choir';
@@ -27,6 +28,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/pastors" element={<Pastors />} />
             <Route path="/church-elders" element={<ChurchElders />} />
+            <Route path="/our-team" element={<OurTeam />} />
             <Route path="/services" element={<Services />} />
             <Route path="/sermons" element={<Sermons />} />
             <Route path="/choir" element={<Choir />} />

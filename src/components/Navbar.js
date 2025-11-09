@@ -57,8 +57,8 @@ function Navbar() {
           </li>
           
           <li className="nav-item dropdown">
-            <div 
-              className={`nav-link ${isActive('/about') || isActive('/pastors') || isActive('/church-elders') ? 'active' : ''}`}
+            <div
+              className={`nav-link ${isActive('/about') || isActive('/pastors') || isActive('/church-elders') || isActive('/our-team') ? 'active' : ''}`}
               onClick={() => toggleDropdown('about')}
             >
               About Us <i className="bi bi-chevron-down"></i>
@@ -77,6 +77,11 @@ function Navbar() {
               <li>
                 <Link to="/church-elders" className="dropdown-link" onClick={closeMenu}>
                   Church Elders
+                </Link>
+              </li>
+              <li>
+                <Link to="/our-team" className="dropdown-link" onClick={closeMenu}>
+                  Our Team
                 </Link>
               </li>
             </ul>
