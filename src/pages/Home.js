@@ -20,6 +20,14 @@ function Home() {
               <Link to="/services" className="btn btn-primary">
                 Worship With Us
               </Link>
+              <a
+                href="https://www.youtube.com/@aicchebisaas"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary"
+              >
+                Watch Live Service
+              </a>
               <Link to="/about" className="btn btn-secondary">
                 Learn More
               </Link>

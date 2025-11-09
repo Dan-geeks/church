@@ -298,6 +298,189 @@
   }
 }
 
+/* YouTube Button */
+.youtube-button-container {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  border: 2px solid #e9ecef;
+}
+
+.youtube-text {
+  font-size: 1rem;
+  color: #2c3e50;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.btn-youtube {
+  display: inline-block;
+  background: #ff0000;
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-youtube:hover {
+  background: #cc0000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
+}
+
+/* Pastor Content Sections */
+.pastor-content {
+  margin-bottom: 2rem;
+}
+
+.pastor-section {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #f39c12;
+}
+
+.pastor-section h4 {
+  color: #2c3e50;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.pastor-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pastor-section li {
+  padding: 0.5rem 0;
+  color: #555;
+  font-size: 1rem;
+  position: relative;
+  padding-left: 1.5rem;
+  line-height: 1.7;
+}
+
+.pastor-section li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #f39c12;
+  font-weight: bold;
+}
+
+.pastor-section p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.pastor-cta {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+  color: white;
+}
+
+.pastor-cta h4 {
+  color: #f39c12;
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+}
+
+.pastor-cta p {
+  color: #e8e8e8;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Prayer Request Form */
+.prayer-request-form {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 2rem;
+  border-radius: 15px;
+  margin-top: 2rem;
+  border: 2px solid #dee2e6;
+}
+
+.prayer-request-form h4 {
+  color: #2c3e50;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.prayer-request-form .form-group {
+  margin-bottom: 1rem;
+}
+
+.prayer-request-form input,
+.prayer-request-form textarea {
+  width: 100%;
+  padding: 0.9rem;
+  border: 2px solid #ced4da;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.prayer-request-form input:focus,
+.prayer-request-form textarea:focus {
+  outline: none;
+  border-color: #f39c12;
+  box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.1);
+}
+
+.prayer-request-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.prayer-request-form button[type="submit"] {
+  width: 100%;
+  background: #f39c12;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.prayer-request-form button[type="submit"]:hover {
+  background: #e67e22;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(243, 156, 18, 0.3);
+}
+
+.success-message {
+  background: #d4edda;
+  color: #155724;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+  border: 2px solid #c3e6cb;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .pastors-hero {
@@ -329,5 +512,9 @@
 
   .connect-options {
     grid-template-columns: 1fr;
+  }
+
+  .prayer-request-form {
+    padding: 1.5rem;
   }
 }
