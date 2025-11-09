@@ -1,0 +1,285 @@
+.elders-page {
+  min-height: calc(100vh - 80px);
+}
+
+/* Hero Section */
+.elders-hero {
+  background: linear-gradient(135deg, rgba(44, 62, 80, 0.95), rgba(52, 73, 94, 0.95)),
+    url('../assets/church.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 8rem 2rem 6rem;
+  text-align: center;
+  color: white;
+}
+
+.elders-hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  animation: fadeInDown 1s ease;
+}
+
+.elders-hero-content p {
+  font-size: 1.4rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.8;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 1s ease;
+}
+
+/* Introduction Section */
+.elders-intro-section {
+  padding: 5rem 2rem;
+  background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+}
+
+.intro-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.intro-content h2 {
+  font-size: 2.8rem;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+}
+
+.intro-content p {
+  font-size: 1.2rem;
+  line-height: 1.9;
+  color: #555;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+/* Elders Grid Section */
+.elders-grid-section {
+  padding: 5rem 2rem;
+  background: white;
+}
+
+.elders-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.elder-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.4s ease;
+  border-top: 4px solid #f39c12;
+}
+
+.elder-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.elder-icon {
+  font-size: 4rem;
+  color: #f39c12;
+  margin-bottom: 1.5rem;
+}
+
+.elder-card h3 {
+  font-size: 1.6rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.elder-role {
+  color: #f39c12;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.elder-bio {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+.elder-responsibilities {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.elder-responsibilities h4 {
+  color: #2c3e50;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.elder-responsibilities ul {
+  list-style: none;
+  padding: 0;
+}
+
+.elder-responsibilities li {
+  padding: 0.5rem 0;
+  color: #555;
+  font-size: 1rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.elder-responsibilities li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #f39c12;
+  font-weight: bold;
+}
+
+/* Biblical Section */
+.biblical-section {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  color: white;
+}
+
+.biblical-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.biblical-icon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  color: #f39c12;
+}
+
+.biblical-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.biblical-content p {
+  font-size: 1.2rem;
+  line-height: 1.9;
+  margin-bottom: 1.5rem;
+}
+
+.biblical-content p:first-of-type {
+  font-style: italic;
+  font-size: 1.3rem;
+  color: #f39c12;
+}
+
+/* CTA Section */
+.elders-cta {
+  padding: 5rem 2rem;
+  background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+  text-align: center;
+}
+
+.elders-cta h2 {
+  font-size: 2.8rem;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+}
+
+.elders-cta p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.9;
+  color: #555;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 1rem 2.5rem;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: inline-block;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.btn-primary {
+  background: #f39c12;
+  color: white;
+  box-shadow: 0 4px 15px rgba(243, 156, 18, 0.4);
+}
+
+.btn-primary:hover {
+  background: #e67e22;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(243, 156, 18, 0.6);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .elders-hero {
+    padding: 5rem 1.5rem 4rem;
+    background-attachment: scroll;
+  }
+
+  .elders-hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .elders-hero-content p {
+    font-size: 1.1rem;
+  }
+
+  .intro-content h2,
+  .biblical-content h2,
+  .elders-cta h2 {
+    font-size: 2rem;
+  }
+
+  .elders-grid {
+    grid-template-columns: 1fr;
+  }
+}

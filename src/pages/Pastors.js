@@ -1,25 +1,50 @@
 import React from 'react';
 import './Pastors.css';
-import pastorShikanga from '../assets/pastorshikanga.jpg';
-import pastor1 from '../assets/paster1.jpg';
+import pastorPeterShikanga from '../assets/pastorpetershikanga.jpg';
+import pastorBillChoge from '../assets/postarbillchoge.jpg';
 
 function Pastors() {
+  const getInitials = (name = '') =>
+    name
+      .split(' ')
+      .filter(Boolean)
+      .map((part) => part[0])
+      .join('')
+      .slice(0, 2)
+      .toUpperCase();
+
   const pastors = [
     {
       id: 1,
-      name: 'Pastor Shikanga',
+      name: 'Pastor Peter Shikanga',
       title: 'Senior Pastor',
-      image: pastorShikanga,
-      bio: 'Pastor Shikanga has been serving as the Senior Pastor of AIC Chebisaas for over a decade. With a heart for evangelism and community outreach, he leads the congregation with wisdom, compassion, and a deep commitment to biblical teaching. His vision is to see transformed lives through the power of the Gospel.',
+      image: pastorPeterShikanga,
+      bio: 'Pastor Peter Shikanga has been serving as the Senior Pastor of AIC Chebisaas for over a decade. With a heart for evangelism and community outreach, he leads the congregation with wisdom, compassion, and a deep commitment to biblical teaching. His vision is to see transformed lives through the power of the Gospel.',
       specialties: ['Biblical Teaching', 'Church Leadership', 'Community Outreach']
     },
     {
       id: 2,
-      name: 'Pastor Samuel',
+      name: 'Pastor Bill Choge',
       title: 'Associate Pastor',
-      image: pastor1,
-      bio: 'Pastor Samuel serves as the Associate Pastor, bringing energy and dedication to youth ministry and worship. His passion for connecting with young people and leading dynamic worship services has been instrumental in growing our church community. He believes in empowering the next generation of believers.',
+      image: pastorBillChoge,
+      bio: 'Pastor Bill Choge serves as the Associate Pastor, bringing energy and dedication to youth ministry and worship. His passion for connecting with young people and leading dynamic worship services has been instrumental in growing our church community. He believes in empowering the next generation of believers.',
       specialties: ['Youth Ministry', 'Worship Leading', 'Discipleship']
+    },
+    {
+      id: 3,
+      name: 'Pastor Profile Coming Soon',
+      title: '',
+      image: null,
+      bio: '',
+      specialties: []
+    },
+    {
+      id: 4,
+      name: 'Pastor Profile Coming Soon',
+      title: '',
+      image: null,
+      bio: '',
+      specialties: []
     }
   ];
 
@@ -48,30 +73,48 @@ function Pastors() {
           </div>
 
           <div className="pastors-grid">
-            {pastors.map((pastor) => (
-              <div key={pastor.id} className="pastor-card">
-                <div className="pastor-image-container">
-                  <img src={pastor.image} alt={pastor.name} className="pastor-image" />
-                  <div className="pastor-overlay">
-                    <h3>{pastor.name}</h3>
-                    <p className="pastor-title">{pastor.title}</p>
+            {pastors.map((pastor) => {
+              const hasImage = Boolean(pastor.image);
+
+              return (
+                <div key={pastor.id} className="pastor-card">
+                  <div className={`pastor-image-container${hasImage ? '' : ' pastor-image-container--empty'}`}>
+                    {hasImage ? (
+                      <img src={pastor.image} alt={pastor.name} className="pastor-image" />
+                    ) : (
+                      <div className="pastor-image-placeholder" aria-hidden="true">
+                        <span>{getInitials(pastor.name)}</span>
+                      </div>
+                    )}
+                    <div className="pastor-overlay">
+                      <h3>{pastor.name}</h3>
+                      {pastor.title && <p className="pastor-title">{pastor.title}</p>}
+                    </div>
+                  </div>
+                  <div className="pastor-details">
+                    <h3 className="pastor-name">{pastor.name}</h3>
+                    {pastor.title && <p className="pastor-position">{pastor.title}</p>}
+                    {pastor.bio && <p className="pastor-bio">{pastor.bio}</p>}
+                    <div
+                      className={`pastor-specialties${
+                        pastor.specialties && pastor.specialties.length > 0 ? '' : ' pastor-specialties--empty'
+                      }`}
+                    >
+                      <h4>Ministry Focus:</h4>
+                      {pastor.specialties && pastor.specialties.length > 0 ? (
+                        <ul>
+                          {pastor.specialties.map((specialty, index) => (
+                            <li key={index}>{specialty}</li>
+                          ))}
+                        </ul>
+                      ) : (
+                        <p>Details coming soon.</p>
+                      )}
+                    </div>
                   </div>
                 </div>
-                <div className="pastor-details">
-                  <h3 className="pastor-name">{pastor.name}</h3>
-                  <p className="pastor-position">{pastor.title}</p>
-                  <p className="pastor-bio">{pastor.bio}</p>
-                  <div className="pastor-specialties">
-                    <h4>Ministry Focus:</h4>
-                    <ul>
-                      {pastor.specialties.map((specialty, index) => (
-                        <li key={index}>{specialty}</li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

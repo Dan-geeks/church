@@ -5,6 +5,7 @@ import './Navbar.css';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(null);
   const location = useLocation();
 
   const toggleMenu = () => {
@@ -13,6 +14,15 @@ function Navbar() {
 
   const closeMenu = () => {
     setIsOpen(false);
+    setOpenDropdown(null);
+  };
+
+  const toggleDropdown = (menu) => {
+    if (openDropdown === menu) {
+      setOpenDropdown(null);
+    } else {
+      setOpenDropdown(menu);
+    }
   };
 
   const isActive = (path) => {
@@ -45,33 +55,85 @@ function Navbar() {
               Home
             </Link>
           </li>
-          <li className="nav-item">
-            <Link 
-              to="/about" 
-              className={`nav-link ${isActive('/about')}`}
-              onClick={closeMenu}
+          
+          <li className="nav-item dropdown">
+            <div 
+              className={`nav-link ${isActive('/about') || isActive('/pastors') || isActive('/church-elders') ? 'active' : ''}`}
+              onClick={() => toggleDropdown('about')}
             >
-              About
-            </Link>
+              About Us <i className="bi bi-chevron-down"></i>
+            </div>
+            <ul className={`dropdown-menu ${openDropdown === 'about' ? 'show' : ''}`}>
+              <li>
+                <Link to="/about" className="dropdown-link" onClick={closeMenu}>
+                  Our Story
+                </Link>
+              </li>
+              <li>
+                <Link to="/pastors" className="dropdown-link" onClick={closeMenu}>
+                  Our Pastors
+                </Link>
+              </li>
+              <li>
+                <Link to="/church-elders" className="dropdown-link" onClick={closeMenu}>
+                  Church Elders
+                </Link>
+              </li>
+            </ul>
           </li>
-          <li className="nav-item">
-            <Link 
-              to="/pastors" 
-              className={`nav-link ${isActive('/pastors')}`}
-              onClick={closeMenu}
+
+          <li className="nav-item dropdown">
+            <div 
+              className={`nav-link ${isActive('/services') || isActive('/sermons') ? 'active' : ''}`}
+              onClick={() => toggleDropdown('worship')}
             >
-              Our Pastors
-            </Link>
+              Worship <i className="bi bi-chevron-down"></i>
+            </div>
+            <ul className={`dropdown-menu ${openDropdown === 'worship' ? 'show' : ''}`}>
+              <li>
+                <Link to="/services" className="dropdown-link" onClick={closeMenu}>
+                  Service Times
+                </Link>
+              </li>
+              <li>
+                <Link to="/sermons" className="dropdown-link" onClick={closeMenu}>
+                  Sermons
+                </Link>
+              </li>
+              <li>
+                <Link to="/choir" className="dropdown-link" onClick={closeMenu}>
+                  Choir
+                </Link>
+              </li>
+              <li>
+                <Link to="/praise-worship" className="dropdown-link" onClick={closeMenu}>
+                  Praise & Worship
+                </Link>
+              </li>
+            </ul>
           </li>
-          <li className="nav-item">
-            <Link 
-              to="/services" 
-              className={`nav-link ${isActive('/services')}`}
-              onClick={closeMenu}
+
+          <li className="nav-item dropdown">
+            <div 
+              className={`nav-link ${isActive('/departments') || isActive('/prayer-groups') ? 'active' : ''}`}
+              onClick={() => toggleDropdown('ministries')}
             >
-              Services
-            </Link>
+              Ministries <i className="bi bi-chevron-down"></i>
+            </div>
+            <ul className={`dropdown-menu ${openDropdown === 'ministries' ? 'show' : ''}`}>
+              <li>
+                <Link to="/departments" className="dropdown-link" onClick={closeMenu}>
+                  Church Departments
+                </Link>
+              </li>
+              <li>
+                <Link to="/prayer-groups" className="dropdown-link" onClick={closeMenu}>
+                  Prayer Groups
+                </Link>
+              </li>
+            </ul>
           </li>
+
           <li className="nav-item">
             <Link 
               to="/events" 
@@ -81,6 +143,7 @@ function Navbar() {
               Events
             </Link>
           </li>
+          
           <li className="nav-item">
             <Link 
               to="/contact" 
