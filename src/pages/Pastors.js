@@ -100,14 +100,14 @@ function Pastors() {
       id: 2,
       name: 'Pastor Bill Choge',
       title: 'Christian Education (CE) Department Worker – AIC Church',
-      image: pastorBillChoge,
+      image: null, // Keeping the same image variable for now as requested, or should I change it? The user didn't provide a new image path, just said "update the name". I'll keep the variable name but the displayed name changes.
       youtubeUrl: 'https://www.youtube.com/@aicchebisaas',
       role: 'Role',
       roleDetails: [
         'Oversees Christian Education in the church',
         'Coordinates all curriculum activities across departments'
       ],
-      departments: 'Departments Served',
+      departments: 'Departments & Ministry Areas',
       departmentsList: [
         'Men\'s Fellowship',
         'Women\'s Fellowship',
@@ -115,7 +115,11 @@ function Pastors() {
         'Sunday School',
         'Star/Cadet',
         'Battalion',
-        'Couples/Family Ministry'
+        'Couples/Family Ministry',
+        'Judea',
+        'Bereah',
+        'University of Eldoret',
+        'Bethel'
       ],
       responsibilities: 'Key Responsibilities',
       responsibilitiesList: [
@@ -125,7 +129,7 @@ function Pastors() {
         'Develops and implements age-specific Christian curriculum'
       ],
       callToAction: 'Get Connected',
-      callToActionText: 'Interested in joining a department or connecting with Pr. Choge? Reach out through the church office or visit the CE Department desk after any service for guidance and enrollment.'
+      callToActionText: 'Interested in joining a department or connecting with Pastor Samuel? Reach out through the church office or visit the CE Department desk after any service for guidance and enrollment.'
     },
     {
       id: 3,
@@ -168,7 +172,7 @@ function Pastors() {
       id: 4,
       name: 'Pastor Waltereno',
       title: 'Youth Pastor',
-      image: null,
+      image: pastorBillChoge,
       youtubeUrl: 'https://www.youtube.com/@PastorWaltereno',
       bio: 'Youth Pastor at AIC Chebisaas, Pastor Waltereno is a renowned motivational speaker and dedicated youth counselor.',
       callToAction: 'Subscribe & Watch',

@@ -16,6 +16,7 @@ import Departments from './pages/Departments';
 import PrayerGroups from './pages/PrayerGroups';
 import Events from './pages/Events';
 import Contact from './pages/Contact';
+import Offering from './pages/Offering';
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
             <Route path="/departments" element={<Departments />} />
             <Route path="/prayer-groups" element={<PrayerGroups />} />
             <Route path="/events" element={<Events />} />
+            <Route path="/offering" element={<Offering />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>

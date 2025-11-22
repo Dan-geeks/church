@@ -36,7 +36,7 @@ function Navbar() {
           <img src={logo} alt="AIC Logo" />
           <span>AIC Chebisaas</span>
         </Link>
-        
+
         <div className="menu-icon" onClick={toggleMenu}>
           <div className={isOpen ? 'hamburger open' : 'hamburger'}>
             <span></span>
@@ -47,15 +47,15 @@ function Navbar() {
 
         <ul className={isOpen ? 'nav-menu active' : 'nav-menu'}>
           <li className="nav-item">
-            <Link 
-              to="/" 
+            <Link
+              to="/"
               className={`nav-link ${isActive('/')}`}
               onClick={closeMenu}
             >
               Home
             </Link>
           </li>
-          
+
           <li className="nav-item dropdown">
             <div
               className={`nav-link ${isActive('/about') || isActive('/pastors') || isActive('/church-elders') || isActive('/our-team') ? 'active' : ''}`}
@@ -88,7 +88,7 @@ function Navbar() {
           </li>
 
           <li className="nav-item dropdown">
-            <div 
+            <div
               className={`nav-link ${isActive('/services') || isActive('/sermons') ? 'active' : ''}`}
               onClick={() => toggleDropdown('worship')}
             >
@@ -119,7 +119,7 @@ function Navbar() {
           </li>
 
           <li className="nav-item dropdown">
-            <div 
+            <div
               className={`nav-link ${isActive('/departments') || isActive('/prayer-groups') ? 'active' : ''}`}
               onClick={() => toggleDropdown('ministries')}
             >
@@ -140,18 +140,28 @@ function Navbar() {
           </li>
 
           <li className="nav-item">
-            <Link 
-              to="/events" 
+            <Link
+              to="/offering"
+              className={`nav-link ${isActive('/offering')}`}
+              onClick={closeMenu}
+            >
+              Offering
+            </Link>
+          </li>
+
+          <li className="nav-item">
+            <Link
+              to="/events"
               className={`nav-link ${isActive('/events')}`}
               onClick={closeMenu}
             >
               Events
             </Link>
           </li>
-          
+
           <li className="nav-item">
-            <Link 
-              to="/contact" 
+            <Link
+              to="/contact"
               className={`nav-link ${isActive('/contact')}`}
               onClick={closeMenu}
             >

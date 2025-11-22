@@ -75,8 +75,8 @@ function Sermons() {
 
   const categories = ['all', 'Faith', 'Prayer', 'Grace', 'Family', 'Service'];
 
-  const filteredSermons = selectedCategory === 'all' 
-    ? sermons 
+  const filteredSermons = selectedCategory === 'all'
+    ? sermons
     : sermons.filter(sermon => sermon.category === selectedCategory);
 
   return (
@@ -180,6 +180,28 @@ function Sermons() {
               <button className="btn btn-outline">
                 <i className="bi bi-rss"></i> Subscribe to Podcast
               </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Upload Section */}
+      <section className="upload-section">
+        <div className="container">
+          <div className="upload-content">
+            <h2>Upload Sermon Notes</h2>
+            <p>Share sermon notes, presentations, or study guides with the congregation.</p>
+            <div className="upload-box">
+              <input
+                type="file"
+                id="sermon-upload"
+                accept=".doc,.docx,.ppt,.pptx,.pdf"
+                className="file-input"
+              />
+              <label htmlFor="sermon-upload" className="btn btn-outline">
+                <i className="bi bi-cloud-upload"></i> Choose File (PDF, DOC, PPT)
+              </label>
+              <p className="upload-hint">Supported formats: PDF, Word, PowerPoint</p>
             </div>
           </div>
         </div>
