@@ -30,7 +30,7 @@
 
 .offering-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
@@ -92,5 +92,43 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .offering-hero {
+    padding: 60px 20px;
+  }
+
+  .offering-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .offering-options {
+    padding: 40px 20px;
+  }
+
+  .offering-card {
+    padding: 30px 20px;
+  }
+
+  .offering-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .offering-hero h1 {
+    font-size: 2rem;
+  }
+
+  .offering-hero p {
+    font-size: 1rem;
+  }
+
+  .paybill-number {
+    font-size: 1.2rem;
   }
 }

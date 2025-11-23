@@ -90,6 +90,8 @@
   font-family: inherit;
   transition: all 0.3s ease;
   background: #f8f9fa;
+  box-sizing: border-box;
+  /* Ensure padding doesn't affect width */
 }
 
 .form-group input:focus,
@@ -299,6 +301,7 @@
     opacity: 0;
     transform: translateY(-30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -310,6 +313,7 @@
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -357,5 +361,20 @@
 
   .map-section h2 {
     font-size: 2rem;
+  }
+
+  .contact-section,
+  .map-section {
+    padding: 3rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .contact-form {
+    padding: 1rem;
   }
 }
